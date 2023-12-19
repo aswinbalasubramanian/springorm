@@ -8,7 +8,25 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:component-scan base-package="com.aswin.spring.springorm.product.dao.impl" />
+	
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="dataSource" 
 		p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost:3306/mydb" p:username="root" p:password="aswin123" />
-			
+		
+		
+	<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="sessionFactory" p:"dataSource">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value></value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hibernateTemplate" p:sessionFactory-ref="sessionFactory" />
 </beans>
