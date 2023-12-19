@@ -1,4 +1,4 @@
-package com.aswin.spring.springorm.entity;
+package com.aswin.spring.springorm.product.dao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
