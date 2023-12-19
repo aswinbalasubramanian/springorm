@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
 
-import com.aswin.spring.springorm.product.dao.Product;
+import com.aswin.spring.springorm.product.entity.Product;
 import com.aswin.spring.springorm.product.dao.ProductDao;
 
 @Component

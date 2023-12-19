@@ -23,7 +23,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value></value>
+				<value>com.aswin.spring.springorm.product.dao</value>
 			</list>
 		</property>
 	</bean>
