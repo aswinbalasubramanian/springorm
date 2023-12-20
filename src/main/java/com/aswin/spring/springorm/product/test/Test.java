@@ -16,9 +16,11 @@ public class Test {
 		product.setId(1);
 		product.setName("Iphone");
 		product.setDesc("Apple devices");
-		product.setPrice(990);
+		product.setPrice(1090);
 
-		productDao.create(product);
+		//productDao.create(product);
+		//productDao.update(product);
+		productDao.delete(product);
 	}
 
 }
