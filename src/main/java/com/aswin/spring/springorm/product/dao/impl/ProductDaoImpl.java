@@ -5,6 +5,9 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
 
 import com.aswin.spring.springorm.product.entity.Product;
+
+import jakarta.transaction.Transactional;
+
 import com.aswin.spring.springorm.product.dao.ProductDao;
 
 @Component
@@ -14,9 +17,10 @@ public class ProductDaoImpl implements ProductDao {
 	HibernateTemplate hibernateTemplate;
 
 	@Override
+	@Transactional
 	public int create(Product product) {
-		// TODO Auto-generated method stub
-		return 0;
+		Integer result = (Integer) hibernateTemplate.save(product);
+		return result;
 	}
 
 }
