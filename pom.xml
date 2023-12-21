@@ -58,6 +58,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>com.aswin.spring</groupId>
+			<artifactId>springjdbc</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
